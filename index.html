@@ -1,108 +1,117 @@
 <html>
-    <head>
-        <title>Inicio | Informática Gráfica</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="blocks.min.css" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://web.galisteo.me/uc3m/ig" />
-        <meta property="twitter:title" content="Inicio | Informática Gráfica" />
-        <meta property="twitter:description" content="Tests de Definiciones para el Examen Final" />
-        <style>
+
+<head>
+    <title>Inicio | Informática Gráfica</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/blocks.min.css" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://ig.uc3m.galisteo.me/" />
+    <meta property="twitter:title" content="Inicio | Informática Gráfica" />
+    <meta property="twitter:description" content="Tests de Definiciones para el Examen Final" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+                'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body .content {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .green,
+        .green::before {
+            color: #ffffff !important;
+            background: #00ae86 !important;
+        }
+
+        .red,
+        .red::before {
+            color: #ffffff !important;
+            background: #c33149 !important;
+        }
+
+        button:disabled,
+        button:disabled::before {
+            color: #ffffff;
+            background: #bbbbbb;
+        }
+
+        .block {
+            display: inline-block;
+        }
+
+        input {
+            color: #000;
+            text-align: center;
+            font-size: 20px;
+            max-width: 300px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col {
+            text-align: left;
+            display: inline-block;
+            flex: 50%;
+        }
+
+        .col h3 {
+            text-align: center;
+        }
+
+        ul li {
+            padding: 2px 5px;
+            border-radius: 2px;
+        }
+
+        ul#hits li:first-child {
+            background: RGBA(0, 174, 134, 0.25);
+        }
+
+        ul#fails li:first-child {
+            background: RGBA(195, 49, 73, 0.25);
+        }
+
+        a.block {
+            text-decoration: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
             body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-                    'Helvetica Neue', Helvetica, Arial, sans-serif;
+                background-color: var(--block-text-color);
+                color: var(--block-background-color);
             }
+        }
+    </style>
+</head>
 
-            body .content {
-                width: 100%;
-                max-width: 800px;
-            }
-
-            .green,
-            .green::before {
-                color: #ffffff !important;
-                background: #00ae86 !important;
-            }
-            .red,
-            .red::before {
-                color: #ffffff !important;
-                background: #c33149 !important;
-            }
-
-            button:disabled,
-            button:disabled::before {
-                color: #ffffff;
-                background: #bbbbbb;
-            }
-
-            .block {
-                display: inline-block;
-            }
-            input {
-                color: #000;
-                text-align: center;
-                font-size: 20px;
-                max-width: 300px;
-            }
-
-            .row {
-                display: flex;
-            }
-
-            .col {
-                text-align: left;
-                display: inline-block;
-                flex: 50%;
-            }
-
-            .col h3 {
-                text-align: center;
-            }
-
-            ul li {
-                padding: 2px 5px;
-                border-radius: 2px;
-            }
-
-            ul#hits li:first-child {
-                background: RGBA(0, 174, 134, 0.25);
-            }
-
-            ul#fails li:first-child {
-                background: RGBA(195, 49, 73, 0.25);
-            }
-
-            a.block {
-                text-decoration: none;
-            }
-
-            @media (prefers-color-scheme: dark) {
-                body {
-                    background-color: var(--block-text-color);
-                    color: var(--block-background-color);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="content">
-            <div style="text-align: center">
-                <h1>🏡 Inicio</h1>
-                <h2>Examen Final - Informática Gráfica</h2>
-            </div>
-
-            <a href="./tema2" class="block">Tema 2: Visión</a><br />
-            <a href="./tema3" class="block">Tema 3: Color</a><br />
-            <a href="./tema4" class="block">Tema 4: Primitivas</a><br />
-            <a href="./tema5" class="block">Tema 5: Transformaciones geométricas</a><br />
-            <a href="./tema6" class="block">Tema 6: Modelado 3D</a><br />
-            <a href="./tema7" class="block">Tema 7: Fractales</a><br />
-            <a href="./tema8" class="block">Tema 8: Iluminación y Sombras</a><br />
-            <a href="./tema9" class="block">Tema 9: Render</a><br />
+<body>
+    <div class="content">
+        <div style="text-align: center">
+            <h1>🏡 Inicio</h1>
+            <h2>Examen Final - Informática Gráfica</h2>
         </div>
-    </body>
+
+        <a href="./tema2" class="block">Tema 2: Visión</a><br />
+        <a href="./tema3" class="block">Tema 3: Color</a><br />
+        <a href="./tema4" class="block">Tema 4: Primitivas</a><br />
+        <a href="./tema5" class="block">Tema 5: Transformaciones geométricas</a><br />
+        <a href="./tema6" class="block">Tema 6: Modelado 3D</a><br />
+        <a href="./tema7" class="block">Tema 7: Fractales</a><br />
+        <a href="./tema8" class="block">Tema 8: Iluminación y Sombras</a><br />
+        <a href="./tema9" class="block">Tema 9: Render</a><br />
+    </div>
+    <noscript>
+        <img src="https://insights.galisteo.me/ingress/bd31daed-c8ea-4395-a823-af960fdcd82a/pixel.gif">
+    </noscript>
+    <script defer src="https://insights.galisteo.me/ingress/bd31daed-c8ea-4395-a823-af960fdcd82a/script.js"></script>
+</body>
+
 </html>

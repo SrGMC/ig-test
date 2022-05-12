@@ -1,120 +1,129 @@
 <html>
-    <head>
-        <title>Tema 5 | Test de definiciones | Informática Gráfica</title>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="blocks.min.css" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://web.galisteo.me/uc3m/ig" />
-        <meta property="twitter:title" content="Test de Definiciones del Examen Final" />
-        <meta property="twitter:description" content="Test de Definiciones del Examen Final" />
-        <style>
+
+<head>
+    <title>Tema 5 | Test de definiciones | Informática Gráfica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/blocks.min.css" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://ig.uc3m.galisteo.me/" />
+    <meta property="twitter:title" content="Test de Definiciones del Examen Final" />
+    <meta property="twitter:description" content="Test de Definiciones del Examen Final" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+                Helvetica, Arial, sans-serif;
+        }
+
+        body .content {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .green,
+        .green::before {
+            color: #ffffff !important;
+            background: #00ae86 !important;
+        }
+
+        .red,
+        .red::before {
+            color: #ffffff !important;
+            background: #c33149 !important;
+        }
+
+        button:disabled,
+        button:disabled::before {
+            color: #ffffff;
+            background: #bbbbbb;
+        }
+
+        .block {
+            display: inline-block;
+        }
+
+        input {
+            color: #000;
+            text-align: center;
+            font-size: 20px;
+            max-width: 300px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col {
+            text-align: left;
+            display: inline-block;
+            flex: 50%;
+        }
+
+        .col h3 {
+            text-align: center;
+        }
+
+        ul li {
+            padding: 2px 5px;
+            border-radius: 2px;
+        }
+
+        ul#hits li:first-child {
+            background: RGBA(0, 174, 134, 0.25);
+        }
+
+        ul#fails li:first-child {
+            background: RGBA(195, 49, 73, 0.25);
+        }
+
+        @media (prefers-color-scheme: dark) {
             body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
-                    Helvetica, Arial, sans-serif;
+                background-color: var(--block-text-color);
+                color: var(--block-background-color);
             }
+        }
+    </style>
+</head>
 
-            body .content {
-                width: 100%;
-                max-width: 800px;
-            }
-
-            .green,
-            .green::before {
-                color: #ffffff !important;
-                background: #00ae86 !important;
-            }
-            .red,
-            .red::before {
-                color: #ffffff !important;
-                background: #c33149 !important;
-            }
-
-            button:disabled,
-            button:disabled::before {
-                color: #ffffff;
-                background: #bbbbbb;
-            }
-
-            .block {
-                display: inline-block;
-            }
-            input {
-                color: #000;
-                text-align: center;
-                font-size: 20px;
-                max-width: 300px;
-            }
-
-            .row {
-                display: flex;
-            }
-
-            .col {
-                text-align: left;
-                display: inline-block;
-                flex: 50%;
-            }
-
-            .col h3 {
-                text-align: center;
-            }
-
-            ul li {
-                padding: 2px 5px;
-                border-radius: 2px;
-            }
-
-            ul#hits li:first-child {
-                background: RGBA(0, 174, 134, 0.25);
-            }
-
-            ul#fails li:first-child {
-                background: RGBA(195, 49, 73, 0.25);
-            }
-            
-            @media (prefers-color-scheme: dark) {
-                body {
-                    background-color: var(--block-text-color);
-                    color: var(--block-background-color);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="content">
-            <h1>Test de Definiciones</h1>
-            <h2>Tema 5</h2>
-            <a href="../" class="block" style="text-decoration: none;">🏡 Inicio</a>
-            <hr />
-            <button class="block red" onclick="reset();">Reiniciar</button>
-            <button class="block" onclick="resetToFailed();" id="solveFailed">Resolver fallidas</button>
-            <hr />
-            <h3>Definición</h3>
-            <p id="definition">Aquí aparecerá la definición a resolver</p>
-            <div class="wrapper block">
-                <input type="text" id="word" placeholder="Escribe aquí la palabra" onkeyup="wordHandler(this)" />
+<body>
+    <div class="content">
+        <h1>Test de Definiciones</h1>
+        <h2>Tema 5</h2>
+        <a href="../" class="block" style="text-decoration: none;">🏡 Inicio</a>
+        <hr />
+        <button class="block red" onclick="reset();">Reiniciar</button>
+        <button class="block" onclick="resetToFailed();" id="solveFailed">Resolver fallidas</button>
+        <hr />
+        <h3>Definición</h3>
+        <p id="definition">Aquí aparecerá la definición a resolver</p>
+        <div class="wrapper block">
+            <input type="text" id="word" placeholder="Escribe aquí la palabra" onkeyup="wordHandler(this)" />
+        </div>
+        <br />
+        <button class="block" id="check" disabled onclick="checkWord()">Comprobar</button>
+        <button class="block" id="next" onclick="displayWord()">Siguiente palabra</button><br />
+        <button class="block" id="status" disabled style="font-size: 20;">Estado</button>
+        <hr />
+        <div class="row">
+            <div class="col">
+                <h3>Aciertos (<span id="hitsCount"></span>)</h3>
+                <ul id="hits"></ul>
             </div>
-            <br />
-            <button class="block" id="check" disabled onclick="checkWord()">Comprobar</button>
-            <button class="block" id="next" onclick="displayWord()">Siguiente palabra</button><br />
-            <button class="block" id="status" disabled style="font-size: 20;">Estado</button>
-            <hr />
-            <div class="row">
-                <div class="col">
-                    <h3>Aciertos (<span id="hitsCount"></span>)</h3>
-                    <ul id="hits"></ul>
-                </div>
-                <div class="col">
-                    <h3>Fallos (<span id="failsCount"></span>)</h3>
-                    <ul id="fails"></ul>
-                </div>
+            <div class="col">
+                <h3>Fallos (<span id="failsCount"></span>)</h3>
+                <ul id="fails"></ul>
             </div>
         </div>
-        <script type="text/javascript" src="script.js"></script>
-    </body>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <noscript>
+        <img src="https://insights.galisteo.me/ingress/bd31daed-c8ea-4395-a823-af960fdcd82a/pixel.gif">
+    </noscript>
+    <script defer src="https://insights.galisteo.me/ingress/bd31daed-c8ea-4395-a823-af960fdcd82a/script.js"></script>
+</body>
+
 </html>
